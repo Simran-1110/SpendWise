@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import {Montserrat} from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         className={montserrat.className} >
           <Toaster/>
         {children}
+        <Analytics />
       </body>
     </html>
     </ClerkProvider>
